@@ -1,0 +1,28 @@
+[project]
+name = "wagjo-cowsay"
+version = "0.0.1"
+authors = [
+  { name="wagjo", email="wagjo@wagjo.com" },
+]
+dependencies = [
+    "colored",
+    "ascii-announcers==0.0.2"
+]
+description = "Cowsay"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/wagjo/cowsay"
+Issues = "https://github.com/wagjo/cowsay/issues"
+
+[project.optional-dependencies]
+deploy= ["twine", "build"]
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+cowsay = "cowsay.__main__:main"
